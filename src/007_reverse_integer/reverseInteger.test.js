@@ -4,7 +4,8 @@ describe('7. Reverse Integer', () => {
     it('should reverse a positive integer', () => {
         const num = 123
         const result = reverse(num)
-        expect(result).toEqual(321)
+        const expectation = 321
+        expect(result).toEqual(expectation)
     })
 
     it('should reverse a negative integer', () => {
