@@ -1,4 +1,4 @@
-const isisValidSudoku = require('./validSudoku')
+const isValidSudoku = require('./validSudoku')
 
 describe('36. Valid Sudoku', ()=> {
     it('should return true with valid board', () => {
@@ -13,7 +13,7 @@ describe('36. Valid Sudoku', ()=> {
             ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
             ['.', '.', '.', '.', '8', '.', '.', '7', '9']
           ]
-        const result = isisValidSudoku(board)
+        const result = isValidSudoku(board)
         expect(result).toEqual(true)
     })
 
@@ -29,7 +29,7 @@ describe('36. Valid Sudoku', ()=> {
             ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
             ['.', '.', '.', '.', '8', '.', '.', '7', '9']
           ]
-        const result = isisValidSudoku(board)
+        const result = isValidSudoku(board)
         expect(result).toEqual(false)
     })
 
@@ -45,7 +45,7 @@ describe('36. Valid Sudoku', ()=> {
             ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
             ['5', '.', '.', '.', '8', '.', '.', '7', '9']
           ]
-        const result = isisValidSudoku(board)
+        const result = isValidSudoku(board)
         expect(result).toEqual(false)
     })
 
@@ -61,7 +61,7 @@ describe('36. Valid Sudoku', ()=> {
             ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
             ['5', '.', '.', '.', '8', '.', '.', '7', '9']
           ]
-        const result = isisValidSudoku(board)
+        const result = isValidSudoku(board)
         expect(result).toEqual(false)
     })
 })
