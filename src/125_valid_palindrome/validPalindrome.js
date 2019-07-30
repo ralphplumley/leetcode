@@ -6,7 +6,7 @@ const isPalindrome = (s) => {
 
     let cleaned = s.replace(/[^a-zA-Z0-9]/gi, '').toLowerCase()
 
-    for (let i = 0; i < cleaned.length; i++) {
+    for (let i = 0; i < Math.floor(cleaned.length/2); i++) {
         
         let charA = cleaned[i]
         let charB = cleaned[cleaned.length - 1 - i]
