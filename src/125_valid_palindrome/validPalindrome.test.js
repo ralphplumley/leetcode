@@ -13,49 +13,48 @@ Output: false
 const isPalindrome = require('./validPalindrome')
 
 describe('125. Valid Palindrome', () => {
+  it('should return true for an empty string', () => {
+    const s = ''
 
-    it('should return true for an empty string', () => {
-        const s = ""
+    const expectation = true
+    const result = isPalindrome(s)
 
-        const expectation = true
-        const result = isPalindrome(s)
-        
-        expect(result).toEqual(expectation)
-    })
+    expect(result).toEqual(expectation)
+  })
 
-    it('should return true for example 1', () => {
-        const s = "A man, a plan, a canal: Panama"
+  it('should return true for example 1', () => {
+    const s = 'A man, a plan, a canal: Panama'
 
-        const expectation = true
-        const result = isPalindrome(s)
-        
-        expect(result).toEqual(expectation)
-    })
+    const expectation = true
+    const result = isPalindrome(s)
 
-    it('should return false for example 2', () => {
-        const s = "race a car"
+    expect(result).toEqual(expectation)
+  })
 
-        const expectation = false
-        const result = isPalindrome(s)
-        
-        expect(result).toEqual(expectation)
-    })
+  it('should return false for example 2', () => {
+    const s = 'race a car'
 
-    it('should return false for "0P"', () => {
-        const s = "0P"
+    const expectation = false
+    const result = isPalindrome(s)
 
-        const expectation = false
-        const result = isPalindrome(s)
-        
-        expect(result).toEqual(expectation)
-    })
+    expect(result).toEqual(expectation)
+  })
 
-    it('should return true for " "', () => {
-        const s = " "
+  it('should return false for "0P"', () => {
+    const s = '0P'
 
-        const expectation = true
-        const result = isPalindrome(s)
-        
-        expect(result).toEqual(expectation)
-    })
+    const expectation = false
+    const result = isPalindrome(s)
+
+    expect(result).toEqual(expectation)
+  })
+
+  it('should return true for " "', () => {
+    const s = ' '
+
+    const expectation = true
+    const result = isPalindrome(s)
+
+    expect(result).toEqual(expectation)
+  })
 })

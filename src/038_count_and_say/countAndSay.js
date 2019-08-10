@@ -1,36 +1,34 @@
-const countAndSay = (n) => {
-    let store = {}
-    for (let i = 1; i <= n; i++) {
-        if (i === 1) {
-            store[1] = JSON.stringify(1)
-            continue
-        }
-
-        let priorStringNum = store[i-1]
-        let count = 1
-        let str = ""
-
-        for (let j = 0; j < store[i-1].length; j++) {
-            let currChar = priorStringNum[j]
-
-            if (priorStringNum[j + 1] !== currChar) {
-                str += JSON.stringify(count)
-                str += currChar
-                count = 1
-            } else {
-                count++
-            }
-
-            if (j === store[i-1].length - 1) {
-                store[i] = str
-            }
-        }
+const countAndSay = n => {
+  let store = {}
+  for (let i = 1; i <= n; i++) {
+    if (i === 1) {
+      store[1] = JSON.stringify(1)
+      continue
     }
 
-    return store[n]
-}
+    let priorStringNum = store[i - 1]
+    let count = 1
+    let str = ''
 
-console.log(countAndSay(6))
+    for (let j = 0; j < store[i - 1].length; j++) {
+      let currChar = priorStringNum[j]
+
+      if (priorStringNum[j + 1] !== currChar) {
+        str += JSON.stringify(count)
+        str += currChar
+        count = 1
+      } else {
+        count++
+      }
+
+      if (j === store[i - 1].length - 1) {
+        store[i] = str
+      }
+    }
+  }
+
+  return store[n]
+}
 
 module.exports = countAndSay
 
