@@ -1,5 +1,5 @@
 const deleteNode = node => {
-  node.value = node.next.value
+  node.val = node.next.val
   node.next = node.next.next
 }
 
