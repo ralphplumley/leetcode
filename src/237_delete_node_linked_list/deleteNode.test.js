@@ -36,7 +36,7 @@ const linkedListAsArray = node => {
 }
 
 describe('237. Delete Node Linked List', () => {
-  xit('should return [4,1,9] from [4,5,1,9] when 5 is removed', () => {
+  xit('', () => {
     // todo
   })
 })

@@ -1,6 +1,6 @@
 const longestCommonPrefix = require('./longestCommonSubstring')
 
-describe('14. Lognest Common Substring', () => {
+describe('14. Longest Common Substring', () => {
     
     it('should return "fl" with input of ["flower","flow","flight"]', () => {
         const strs = ["flower","flow","flight"]
