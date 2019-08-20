@@ -20,6 +20,17 @@ const reverseLinkedListIter = (head) => {
     return prev
 }
 
+const reverseLinkedListRecursive = (head) => {
+    if (head === null || head.next === null) {
+        return head
+    }
+
+    let reversed = reverseLinkedListRecursive(head.next)
+    head.next.next = head
+    head.next = null
+    return reversed
+}
+
 const createLinkedList = arr => {
     let head = new ListNode(arr[0])
     let currentNode = head
@@ -38,6 +49,6 @@ const createLinkedList = arr => {
   }
 
 let ll = createLinkedList([1,2,3,4,5])
-console.log(reverseLinkedListIter(ll))
+console.log(reverseLinkedListRecursive(ll))
 
 module.exports = reverseLinkedListIter
